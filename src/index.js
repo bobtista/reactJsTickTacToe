@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Clock from '../node_modules/my-clock/src/index.js';
-import Clock from 'my-clock';
+import { Clock } from 'my-clock';
 import './index.css';
 
 function Square(props) {
@@ -106,7 +106,7 @@ class Game extends React.Component {
 
     return (
       <div>
-        
+
         <div className="game">
           <div className="game-board">
             <Board
@@ -119,17 +119,20 @@ class Game extends React.Component {
             <ol>{moves}</ol>
           </div>
         </div>
+      <div>
+      
       </div>
+      </div>
+
     );
   }
 }
 
 // ========================================
-
-ReactDOM.render(
-  <Game />,
-  document.getElementById('root')
-);
+// var x = new Clock;
+// console.log(x);
+// console.dir(x);
+console.dir(Clock);
 
 function calculateWinner(squares) {
   const lines = [
@@ -150,3 +153,8 @@ function calculateWinner(squares) {
   }
   return null;
 }
+
+ReactDOM.render(
+  <Game />,
+  document.getElementById('root')
+);
