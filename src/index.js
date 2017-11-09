@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import Clock from '../node_modules/my-clock/src/index.js';
-import { Clock } from 'my-clock';
+import Clock from 'my-clock';
 import './index.css';
 
 function Square(props) {
@@ -45,7 +45,7 @@ class Board extends React.Component {
   }
 }
 
-class Game extends React.Component {
+export default class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -106,7 +106,7 @@ class Game extends React.Component {
 
     return (
       <div>
-
+        
         <div className="game">
           <div className="game-board">
             <Board
@@ -119,9 +119,6 @@ class Game extends React.Component {
             <ol>{moves}</ol>
           </div>
         </div>
-      <div>
-      
-      </div>
       </div>
 
     );
@@ -129,10 +126,7 @@ class Game extends React.Component {
 }
 
 // ========================================
-// var x = new Clock;
-// console.log(x);
-// console.dir(x);
-console.dir(Clock);
+// console.dir(Clock);
 
 function calculateWinner(squares) {
   const lines = [
